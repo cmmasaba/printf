@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  *_printto - prints a range of char addresses
+  *_print_to - prints a range of char addresses
   *@start: starting address
   *@fin: stopping address
   *@except: except address
@@ -18,6 +18,31 @@ int _print_to(char *start, char *fin, char *except)
 		if (start != except)
 			sum += _putchar(*start);
 		start++;
+	}
+	return (sum);
+}
+
+/**
+  *_printrev - prints string in reverse
+  *@va: string
+  *@direct: the directives struct
+  *
+  *Return: number bytes printed
+  */
+
+int _printrev(va_list va, directives *direct)
+{
+	int len, sum = 0;
+	char *str = va_arg(va, char *);
+	(void)direct;
+
+	if (str)
+	{
+		for (len = 0; *str; str++)
+			len++;
+		str--;
+		for (; len > 0; len--, str--)
+			sum += _putchar(*str);
 	}
 	return (sum);
 }
