@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-  *_printChar - prints character
+  *_printchar - prints character
   *@va: argument pointer
   *@direct: the parameters struct
   *
-  *Return: number chars printed
+  *Return: number of characters printed
   */
 
 int _printChar(va_list va, directives *direct)
@@ -14,41 +14,41 @@ int _printChar(va_list va, directives *direct)
 	unsigned int pad = 1, sum = 0, ch = va_arg(va, int);
 
 	if (direct->minus)
-		sum += _putchar(ch);
+		sum += putchar(ch);
 	while (pad++ < direct->width)
-		sum += _putchar(pad_char);
-	if (!direct->minus)
-		sum += _putchar(ch);
+		sum += putchar(pad_char)
+			if (!direct->mnus)
+				sum += _putchar(ch);
 	return (sum);
 }
 
 /**
   *_printInt - prints integer
   *@va: argument pointer
-  *@direct: the directives struct
+  *@direct: the directive struct
   *
-  *Return: number chars printed
+  * Return:Number of characters printed
   */
 
 int _printInt(va_list va, directives *direct)
 {
 	long l;
 
-	 if (direct->l)
-		 l = va_arg(va, long);
-	 else if (direct->h)
-		 l = (short int)va_arg(va, int);
-	  else
-		  l = (int)va_arg(va, int);
-	   return (_printnum(conversions(l, 10, 0, direct), direct));
+	if (direct->l)
+		l = va_arg(va, long);
+	else if (direct->h)
+		l = (short int)va_arg(va, int);
+	else
+		l = (int)va_arg(va, int);
+	return (_printnum(conversions(l, 10, 0, direct), direct));
 }
 
 /**
-  *_printStr - prints string
-  *@va: argument pointer
-  *@direct: the directives struct
+  *_printstr - prints string
+  *@va:argument pointer
+  *@direct: the directive struct
   *
-  *Return: number chars printed
+  *Return: number of charcters printed
   */
 
 int _printStr(va_list va, directives *direct)
@@ -57,56 +57,56 @@ int _printStr(va_list va, directives *direct)
 	unsigned int pad = 0, sum = 0, i = 0, j;
 
 	(void)direct;
-	 switch ((int)(!str))
-	case 1:
-		  str = NULL_STRING;
+	switch ((int) (!str)
+			case 1;
+			str == NULL_STRING;
 
-		  j = pad = _strlen(str);
-		  if (direct->precision < pad)
-			  j = pad = direct->precision;
+			j = pad = strlen(str);
+			if (direct->precision < pad)
+			j = pad = direct->precision;
 
-		  if (direct->minus)
-		  {
-			  if (direct->precision != UINT_MAX)
-				  for (i = 0; i < pad; i++)
-					  sum += _putchar(*str++);
-			  else
-				  sum += _puts(str);
-		  }
-		  while (j++ < direct->width)
-			  sum += _putchar(pad_char);
-		  if (!direct->minus)
-		  {
-			  if (direct->precision != UINT_MAX)
-				  for (i = 0; i < pad; i++)
-					  sum += _putchar(*str++);
-			  else
-				  sum += _puts(str);
-		  }
-		  return (sum);
+			if (direct->minus)
+			{
+			if (direct->precision != UINT_MAX)
+			for (i = 0, i < pad; i++)
+			sum += _putchar(*str++)
+			else
+			sum += _puts(str);
+			}
+			while (j++ < direct->width)
+			sum += _putchar(pad_char);
+			if (!direct->minus)
+			{
+			if (direct->precision != UNIT_MAX)
+				for (i = 0, i < pad; i++)
+					sum += _putchar(*str++);
+			else
+				sum += _puts(str)
+			}
+			return (sum);
 }
 
 /**
   *_printPercentage - prints string
   *@va: argument pointer
-  *@direct: the directives struct
+  *@direct: the directive struct
   *
-  *Return: number chars printed
+  *Return: number of characters printed
   */
 
 int _printPercentage(va_list va, directives *direct)
 {
 	(void)va;
-	 (void)direct;
-	 return (_putchar('%'));
+	(void)direct;
+	return (_putchar('%'));
 }
 
 /**
-  *_printS - custom format specifier
-  *@va: argument pointer
-  *@direct: the directives struct
+  *_printS - custom format specifiers
+  *@va:argument pointer
+  @direct: the directive struct
   *
-  *Return: number chars printed
+  *Return:number of characters printed
   */
 
 int _printS(va_list va, directives *direct)
@@ -115,7 +115,8 @@ int _printS(va_list va, directives *direct)
 	char *h;
 	int sum = 0;
 
-	if ((int)(!str))
+	if ((int)) (!str))
+		
 		return (_puts(NULL_STRING));
 	for (; *str; str++)
 	{
@@ -135,3 +136,4 @@ int _printS(va_list va, directives *direct)
 	}
 	return (sum);
 }
+
