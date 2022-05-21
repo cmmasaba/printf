@@ -100,7 +100,7 @@ int _printnumright(char *str, directives *direct)
 }
 
 /**
- * _printnumlef - prints a number with options
+ * _printnumleft - prints a number with options
  * @str: the base number as a string
  * @direct: the directives struct
  *
