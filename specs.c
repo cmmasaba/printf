@@ -6,7 +6,8 @@
  *
  * Return: the number of bytes printed
  */
-int (*_specifier(char *s))(va_list va, directives *direct)
+
+int (*_specifier(char *s))(va_list, directives *)
 {
 	specifier_t specifiers[] = {
 		{"c", _printChar},
@@ -37,6 +38,7 @@ int (*_specifier(char *s))(va_list va, directives *direct)
 	}
 	return (NULL);
 }
+
 
 /**
  * _printfunc - finds the format func
