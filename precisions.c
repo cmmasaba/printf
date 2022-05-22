@@ -1,14 +1,13 @@
 #include "main.h"
 
 /**
-  *_precision - gets the precision from the format string
-  *@p:the format string
-  *@direct:the parameters struct
-  *@va: the argument pointer
-  *
-  *Return: new pointer
-  */
-
+ * _precision - gets the precision from the format string
+ * @p: the format string
+ * @direct: the parameters struct
+ * @va: the argument pointer
+ *
+ * Return: new pointer
+ */
 char *_precision(char *p, directives *direct, va_list va)
 {
 	int d = 0;

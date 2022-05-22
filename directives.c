@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
-  *directives_init - clears struct fields and reset buf
-  *@direct: the directives struct
-  *@va: the argument pointer
-  *
-  *Return: void
-  */
-
+ * directives_init - clears struct fields and reset buf
+ * @direct: the directives struct
+ * @va: the argument pointer
+ *
+ * Return: void
+ */
 void directives_init(directives *direct, va_list va)
 {
 	direct->unsign = 0;
