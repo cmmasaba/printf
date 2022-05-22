@@ -5,7 +5,7 @@
  * @direct: the directives struct
  * @va: the argument pointer
  *
- * Return: void
+ * Return: Void
  */
 void directives_init(directives *direct, va_list va)
 {
