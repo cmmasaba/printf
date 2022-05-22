@@ -1,14 +1,13 @@
 #include "main.h"
 
 /**
-  *_print_to - prints a range of char addresses
-  *@start: starting address
-  *@fin: stopping address
-  *@except: except address
-  *
-  *Return: number bytes printed
-  */
-
+ * _printto - prints a range of char addresses
+ * @start: starting address
+ * @fin: stopping address
+ * @except: except address
+ *
+ * Return: number bytes printed
+ */
 int _print_to(char *start, char *fin, char *except)
 {
 	int sum = 0;
@@ -23,13 +22,12 @@ int _print_to(char *start, char *fin, char *except)
 }
 
 /**
-  *_printrev - prints string in reverse
-  *@va: string
-  *@direct: the directives struct
-  *
-  *Return: number bytes printed
-  */
-
+ * _printrev - prints string in reverse
+ * @va: string
+ * @direct: the directives struct
+ *
+ * Return: number bytes printed
+ */
 int _printrev(va_list va, directives *direct)
 {
 	int len, sum = 0;
@@ -48,13 +46,12 @@ int _printrev(va_list va, directives *direct)
 }
 
 /**
-  *_printrot13 - prints string in rot13
-  *@va: string
-  *@direct: the directives struct
-  *
-  *Return: number bytes printed
-  */
-
+ * _printrot13 - prints string in rot13
+ * @va: string
+ * @direct: the directives struct
+ *
+ * Return: number bytes printed
+ */
 int _printrot13(va_list va, directives *direct)
 {
 	int i, index;
@@ -69,7 +66,7 @@ int _printrot13(va_list va, directives *direct)
 	while (a[i])
 	{
 		if ((a[i] >= 'A' && a[i] <= 'Z')
-				|| (a[i] >= 'a' && a[i] <= 'z'))
+		    || (a[i] >= 'a' && a[i] <= 'z'))
 		{
 			index = a[i] - 65;
 			count += _putchar(arr[index]);
@@ -80,4 +77,3 @@ int _printrot13(va_list va, directives *direct)
 	}
 	return (count);
 }
-
