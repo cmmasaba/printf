@@ -6,7 +6,7 @@
  * @fin: stopping address
  * @except: except address
  *
- * Return: number bytes printed
+ * Return: number of bytes printed
  */
 int _print_to(char *start, char *fin, char *except)
 {
