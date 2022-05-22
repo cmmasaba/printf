@@ -16,7 +16,7 @@ The following files are contained in this project and a brief description
 
 ###### Contributors ######
 - Collins Mmasaba `email:`<collins.mmasaba@azubiafrica.org>
-- Rachel Miano `email:` <rachelmiano91@gmail.com>
+- Rushelle Miano `email:` <rachelmiano91@gmail.com>
 
 ###### Copyright ######
 - © 2022
