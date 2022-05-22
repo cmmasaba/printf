@@ -2,7 +2,7 @@
 
 /**
  * _precision - gets the precision from the format string
- * @p: the format string
+ * @p: format string
  * @direct: the parameters struct
  * @va: the argument pointer
  *
